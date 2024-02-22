@@ -3,6 +3,7 @@
 public class User : EntityBase
 {
     public ICollection<Movie> Movies { get; set; }
+    
 
     public User()
     {

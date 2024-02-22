@@ -10,12 +10,19 @@ public class Movie : EntityBase
     public int GenreId { get; set; }
     public Genre Genre { get; set; }
 
-    public Movie(string title, string description, int year, int genreId, Genre genre)
+    public ICollection<User> FavoritedUsers { get; set; }
+
+    public Movie()
     {
+        FavoritedUsers = new List<User>();
+    }
+
+    public Movie(string title, string description, int year, int genreId)
+    {
+        FavoritedUsers = new List<User>();
         Title = title;
         Description = description;
         Year = year;
         GenreId = genreId;
-        Genre = genre;
     }
 }

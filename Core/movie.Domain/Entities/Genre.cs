@@ -6,6 +6,12 @@ public class Genre : EntityBase
     public string Description { get; set; }
     public virtual ICollection<Movie> Movies { get; set; }
 
+
+    public Genre()
+    {
+        Movies = new List<Movie>();
+    }
+
     public Genre(string name, string description)
     {
         Name = name;
