@@ -13,7 +13,13 @@ public class GenreConfiguration : IEntityTypeConfiguration<Genre>
 
 
 
-        Genre genre = new Genre() { Id = 1, Name = "Drama", 
-        Description = "Drama is a category of narrative fiction intended to be more serious than humorous in tone." };
+        Genre genre = new Genre()
+        {
+            Id = 1,
+            Name = "Drama",
+            Description = "Drama is a category of narrative fiction intended to be more serious than humorous in tone."
+        };
+
+        builder.HasData(genre);
     }
 }

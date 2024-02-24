@@ -22,7 +22,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "The Shawshank Redemption",
             Description = "Two imprisoned,",
             Year = 1994,
-            GenreId = 2
+            GenreId = 1
         };
 
         builder.HasData(movie, movie2);
