@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using movie.Application;
+using movie.Application.Interfaces.UnitOfWorks;
 
 namespace movie.Persistence;
 
@@ -15,6 +16,7 @@ public static class Registration
 
             services.AddScoped(typeof(IReadRepository<>), typeof(ReadRepository<>));
             services.AddScoped(typeof(IWriteRepository<>), typeof(WriteRepository<>));
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
         });
     }
 }
