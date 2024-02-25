@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using movie.Application;
 
 namespace movie.Persistence;
 
@@ -11,6 +12,8 @@ public static class Registration
         services.AddDbContext<AppDbContext>(options =>
         {
             options.UseSqlite(configuration.GetConnectionString("LiteConnection"));
+
+            services.AddScoped(typeof(IReadRepository<>), typeof(ReadRepository<>));
         });
     }
 }

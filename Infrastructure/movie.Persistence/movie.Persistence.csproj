@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Core\movie.Domain\movie.Domain.csproj" />
+    <ProjectReference Include="..\..\Core\movie.Application\movie.Application.csproj" />
   </ItemGroup>
 
 </Project>
